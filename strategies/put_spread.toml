@@ -1,0 +1,13 @@
+scrip = "NIFTY"
+
+[[buy]]
+strike = 16700
+expiry = "20210930"
+opt = "PE"
+qty = 50
+
+[[sell]]
+strike = 17000
+expiry = "20210930"
+opt = "PE"
+qty = 50

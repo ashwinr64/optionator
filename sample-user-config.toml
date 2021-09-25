@@ -1,0 +1,24 @@
+# Fetch the following details from 5paisa
+[app-cred]
+APP_NAME = "XXXX"
+APP_SOURCE = XXXX
+ENCRYPTION_KEY = "XXXX"
+PASSWORD = "XXXX"
+USER_ID = "XXXX"
+USER_KEY = "XXXX"
+
+# Supports multiple user credentials
+[users.1]
+dob = "yyyymmdd"
+email = "XXXX"
+passwd = "XXXX"
+
+[users.2]
+dob = "yyyymmdd"
+email = "XXXX"
+passwd = "XXXX"
+
+[users.3]
+dob = "yyyymmdd"
+email = "XXXX"
+passwd = "XXXX"
