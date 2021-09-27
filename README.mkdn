@@ -1,0 +1,35 @@
+# optionator-5paisa
+
+optionator-5paisa is a Python script for quickly executing multi-legged option strategies including put/call spreads, 
+iron condor and so on. This script emulates basket order and solves the problem of managing multiple accounts.
+
+## Setup
+
+* Clone this repository and `cd` into the clone:
+    ```bash
+    git clone https://github.com/ashwinr64/optionator-5paisa.git
+    cd optionator-5paisa
+    ```
+* Make sure python is installed on your system and install the requirements:
+    ```bash
+    pip install -r requirements.txt
+    ```
+* Get API keys from 5paisa website: https://invest.5paisa.com/DeveloperAPI/APIKeys
+* Populate sample-user-config.toml with the details from the previous step and add user login details. Note that you 
+  may add multiple users to the toml file. 
+* Run:
+    ```bash
+    mv sample-user-config.toml user-config.toml
+    ```
+
+## Usage
+* Update the existing templates in `strategies` folder or create strategies of your own.
+* For example, to execute iron condor strategy in NIFTY, run:
+    ```bash
+    python optionator.py 1 ./strategies/nifty_iron_condor.toml
+    ```
+* The first argument(`1`) is the ID of the user you want to execute the strategy on followed by the path to the strategies toml(`./strategies/nifty_iron_condor.toml`).
+
+## Sample Run
+![](assets/sample_usage.png)
+Note that `--demo` enables dry-run mode and doesn't place order actually.
