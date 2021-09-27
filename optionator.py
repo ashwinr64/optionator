@@ -1,10 +1,12 @@
 # This is a python script to execute option strategies in 5Paisa
+import time
+
+import toml
 import typer
-from typer.colors import *
 from py5paisa import FivePaisaClient
 from py5paisa.order import Order
-import toml
 from tabulate import tabulate
+from typer.colors import *
 
 app = typer.Typer()
 config = {}
@@ -86,6 +88,8 @@ def trade(
             typer.secho(f"{sym} qty:{buy['qty']} - order placed successfully!", fg=GREEN)
         else:
             raise typer.Abort()
+    
+    time.sleep(2)
 
     for sell in strategy.get("sell", []):
         token, sym = get_scripcode(client, strategy["scrip"], sell["strike"], sell["expiry"], sell["opt"])
