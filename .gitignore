@@ -1,2 +1,5 @@
 user-config.toml
 custom
+.idea/
+.vscode/
+__pycache__/

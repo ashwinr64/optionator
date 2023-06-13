@@ -1,0 +1,22 @@
+scrip = 'FINNIFTY'
+#expiry = '20230608'
+
+[exit]
+strikes = '0-0'
+hedge_gap = 200
+
+[entry]
+strikes = '19300-19600'
+hedge_gap = 200
+
+[clients.ramesh]
+exit_qty = 800
+entry_qty = 800
+
+[clients.meenakshi]
+exit_qty = 600
+entry_qty = 600
+
+[clients.ashwin]
+exit_qty = 400
+entry_qty = 400
